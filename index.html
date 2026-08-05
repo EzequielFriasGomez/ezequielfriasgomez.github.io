@@ -109,16 +109,61 @@
     #main ul li strong {
         color: #222222 !important; 
     }
+	/* --- ESTILOS DEL ACORDEÓN (MODO CLARO) --- */
+    #main details summary {
+        font-weight: bold;
+        color: #111111 !important; 
+        background-color: #d9d9d9 !important; 
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #bfbfbf;
+    }
+    #main details .resumen-content {
+        padding: 15px;
+        color: #333333 !important; /* Texto normal en gris bien oscuro */
+        background-color: #f2f2f2 !important; 
+        border: 1px solid #bfbfbf;
+        border-top: none;
+        border-radius: 0 0 5px 5px;
+        font-size: 0.9em;
+        text-align: left;
+    }
+    #main details .resumen-content strong {
+        color: #000000 !important; /* Negritas en negro puro para que destaquen */
+    }
+    #main details a {
+        color: #000000 !important;
+        font-weight: bold;
+    }
+
+    /* --- ESTILOS DEL ACORDEÓN (MODO OSCURO) --- */
+    body.dark-theme #main details summary {
+        color: #ffffff !important;
+        background-color: #333333 !important;
+        border-color: #555555;
+    }
+    body.dark-theme #main details .resumen-content {
+        color: #d0d0d0 !important; /* Texto normal en grisáceo claro/blanquecino */
+        background-color: #2a2a2a !important; 
+        border-color: #555555;
+    }
+    body.dark-theme #main details .resumen-content strong {
+        color: #ffffff !important; /* Negritas en blanco puro brillante */
+    }
+    body.dark-theme #main details a {
+        color: #ffffff !important; 
+    }
 	</style>
 	</head>
 	<body class="is-preload">
-
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
 					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="Foto de perfil de Víctor Ezequiel" /></a>
-					<h1><strong>Víctor Ezequiel Frías Gómez</strong><br />
-                    Analista de Datos y Negocios <br />
+					<h1>
+					<strong>Víctor Ezequiel Frías Gómez</strong>
+					<span style="display: block; margin-top: 5px;">Analista de Datos y Negocios</span>
+				</h1>
 				</div>
 				<div style="text-align: right; margin-bottom: 20px; font-size: 0.9em;">
 				<strong>ES</strong> | <a href="index_en.html" class="lang-switch">EN</a>
@@ -156,6 +201,18 @@
 								<a href="images/fulls/Graf_Logistica.jpg" class="image fit thumb"><img src="images/fulls/Graf_Logistica.jpg" alt="Dashboard de análisis logístico de e-commerce" /></a>
 								<h3>Análisis de Cuellos de Botella Logísticos en E-Commerce</h3>
 								<p>Mapas de calor y porcentaje de demora por ruta para identificar cuellos de botella en la cadena de suministro.</p>
+								<details style="margin-top: 15px; cursor: pointer;">
+								<summary>
+									Leer Resumen del Reporte
+								</summary>
+								<div class="resumen-content">
+									<p><strong>El Problema:</strong> El volumen de órdenes creció de 20 mil a 53 mil transacciones, pero la infraestructura logística colapsó. La tasa de demora nacional se duplicó (del 4,32% al 8,75%) a pesar de que el gasto en fletes saltó de $388 mil a $1.073 mil.</p>
+									<p><strong>El Diagnóstico:</strong> Las seis rutas con mayor deterioro nacen exclusivamente en el hub de San Pablo (SP), y destinos del norte como Bahía (BA) sufren un colapso sistémico con demoras superiores al 15% sin importar el origen.</p>
+									<p><strong>La Jugada Estratégica:</strong> Ejecutar una auditoría sobre las flotas de transporte y licitar nuevos socios logísticos exigiendo Acuerdos de Nivel de Servicio (SLA) más estrictos para frenar la fuga de capital.</p>
+									<br>
+									<a href="https://github.com/EzequielFriasGomez/E-Commerce-Supply-Chain-Logistics-Bottleneck-Analysis">Ver reporte técnico en GitHub &rarr;</a>
+								</div>
+								</details>
 								<ul class="actions">
 									<li><a href="https://github.com/EzequielFriasGomez/E-Commerce-Supply-Chain-Logistics-Bottleneck-Analysis" class="button small" target="_blank">Ver repositorio en GitHub</a></li>
 								</ul>
@@ -164,6 +221,18 @@
 								<a href="images/fulls/Graf_Expansion.gif" class="image fit thumb"><img src="images/fulls/Graf_Expansion.gif" alt="Dashboard de análisis de expansión corporativa" /></a>
 								<h3>Análisis de Expansión Corporativa</h3>
 								<p>Dashboard con márgenes de rentabilidad y ganancias por ciudad para evaluar oportunidades de expansión.</p>
+								<details style="margin-top: 15px; cursor: pointer;">
+								<summary>
+									Leer Resumen del Reporte
+								</summary>
+								<div class="resumen-content">
+									<p><strong>El Problema:</strong> A pesar de un alto volumen de facturación bruta, la gerencia carecía de visibilidad sobre los costos operativos reales y los márgenes netos de cada región y categoría comercial.</p>
+									<p><strong>El Diagnóstico:</strong> El Q4 infla el volumen de ventas por descuentos pero destruye el margen, mientras que el rubro de Muebles asfixia la rentabilidad global por sus altos costos logísticos. La ganancia neta operativa recae casi en su totalidad en los sectores de Tecnología e Insumos de Oficina.</p>
+									<p><strong>La Jugada Estratégica:</strong> Pausar la apertura de sucursales en la región Sur, realizar una auditoría urgente a la cadena logística del mobiliario y concentrar la expansión corporativa exclusivamente en las verticales eficientes dentro de las grandes urbes.</p>
+									<br>
+									<a href="https://github.com/EzequielFriasGomez/Corporate-Expansion-Analysis">Ver reporte técnico en GitHub &rarr;</a>
+								</div>
+								</details>
 								<ul class="actions">
 									<li><a href="https://github.com/EzequielFriasGomez/Corporate-Expansion-Analysis" class="button small" target="_blank">Ver repositorio en GitHub</a></li>
 								</ul>
@@ -172,6 +241,18 @@
 								<a href="images/fulls/Graf_Sim_Prods.jpg" class="image fit thumb"><img src="images/fulls/Graf_Sim_Prods.jpg" alt="Análisis exploratorio del comportamiento del consumidor" /></a>
 								<h3>Análisis Exploratorio del Comportamiento del Consumidor (EDA)</h3>
 								<p>Exploración de patrones de compra y comportamiento de clientes en e-commerce para detectar oportunidades de negocio.</p>
+								<details style="margin-top: 15px; cursor: pointer;">
+								<summary>
+									Leer Resumen del Reporte
+								</summary>
+								<div class="resumen-content">
+									<p><strong>El Problema:</strong> La empresa estaba invirtiendo su presupuesto publicitario a ciegas a través de todas las demografías. Se necesitaba identificar los patrones reales de compra para optimizar los recursos y dejar de gastar capital ineficientemente.</p>
+									<p><strong>El Diagnóstico:</strong> El público de 18 a 25 años genera solo la mitad de los ingresos en comparación con el segmento adulto, demostrando que la electrónica de alto valor requiere mayor poder adquisitivo. Adicionalmente, el verano representa una temporada de nula rentabilidad frente a los picos masivos del otoño.</p>
+									<p><strong>La Jugada Estratégica:</strong> Recortar drásticamente la publicidad dirigida al segmento joven y frenar la pauta de verano, reasignando ese presupuesto a campañas agresivas de otoño enfocadas directamente en la franja demográfica de 35 a 50 años.</p>
+									<br>
+									<a href="https://github.com/EzequielFriasGomez/Ecommerce-Consumer-Behavior-EDA">Ver reporte técnico en GitHub &rarr;</a>
+								</div>
+								</details>
 								<ul class="actions">
 									<li><a href="https://github.com/EzequielFriasGomez/Ecommerce-Consumer-Behavior-EDA" class="button small" target="_blank">Ver repositorio en GitHub</a></li>
 								</ul>

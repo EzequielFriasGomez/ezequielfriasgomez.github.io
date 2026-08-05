@@ -108,6 +108,50 @@
     #main ul li strong {
         color: #222222 !important; 
     }
+	/* --- ACCORDION STYLES (LIGHT MODE) --- */
+    #main details summary {
+        font-weight: bold;
+        color: #111111 !important; 
+        background-color: #d9d9d9 !important; 
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #bfbfbf;
+    }
+    #main details .resumen-content {
+        padding: 15px;
+        color: #333333 !important; 
+        background-color: #f2f2f2 !important; 
+        border: 1px solid #bfbfbf;
+        border-top: none;
+        border-radius: 0 0 5px 5px;
+        font-size: 0.9em;
+        text-align: left;
+    }
+    #main details .resumen-content strong {
+        color: #000000 !important; 
+    }
+    #main details a {
+        color: #000000 !important;
+        font-weight: bold;
+    }
+
+    /* --- ACCORDION STYLES (DARK MODE) --- */
+    body.dark-theme #main details summary {
+        color: #ffffff !important;
+        background-color: #333333 !important;
+        border-color: #555555;
+    }
+    body.dark-theme #main details .resumen-content {
+        color: #d0d0d0 !important; 
+        background-color: #2a2a2a !important; 
+        border-color: #555555;
+    }
+    body.dark-theme #main details .resumen-content strong {
+        color: #ffffff !important; 
+    }
+    body.dark-theme #main details a {
+        color: #ffffff !important; 
+    }
 	</style>
 	</head>
 	<body class="is-preload">
@@ -116,8 +160,10 @@
 			<header id="header">
 				<div class="inner">
 					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="Profile photo of Victor Ezequiel" /></a>
-					<h1><strong>Víctor Ezequiel Frías Gómez</strong><br />
-                    Data & Business Analyst <br />
+					<h1>
+					<strong>Víctor Ezequiel Frías Gómez</strong>
+					<span style="display: block; margin-top: 5px;">Data & Business Analyst</span>
+				</h1>
 				</div>
 				<div style="text-align: right; margin-bottom: 20px; font-size: 0.9em;">
 				<strong>EN</strong> | <a href="index.html" class="lang-switch">ES</a>
@@ -155,6 +201,18 @@
 								<a href="images/fulls/Graf_Logistica.jpg" class="image fit thumb"><img src="images/fulls/Graf_Logistica.jpg" alt="E-commerce logistics analysis dashboard" /></a>
 								<h3>E-Commerce Logistics Bottleneck Analysis</h3>
 								<p>Heat maps and delay percentage by route to identify bottlenecks in the supply chain.</p>
+								<details style="margin-top: 15px; cursor: pointer;">
+								<summary>
+									Read Executive Summary
+								</summary>
+								<div class="resumen-content">
+									<p><strong>The Problem:</strong> Order volume surged from 20,000 to 53,000 transactions, but the logistics infrastructure was not prepared to sustain such rapid growth. The nationwide delivery delay rate more than doubled (from 4.32% to 8.75%) despite freight spending exponentially rising from $388K to $1.073M.</p>
+									<p><strong>The Diagnosis:</strong> The six highest-volume routes with the greatest performance deterioration all originated from the São Paulo (SP) distribution hub. Destinations such as Bahia (BA) experienced a systemic logistics breakdown, with delivery delays consistently exceeding 15% regardless of the shipment origin.</p>
+									<p><strong>The Strategic Move:</strong> Launch an immediate investigation into the transportation fleets and initiate a competitive bidding process to onboard new logistics partners. Stricter Service Level Agreements (SLAs) must be required to reduce capital waste caused by inefficient operations.</p>
+									<br>
+									<a href="https://github.com/EzequielFriasGomez/E-Commerce-Supply-Chain-Logistics-Bottleneck-Analysis" target="_blank">View technical report on GitHub &rarr;</a>
+								</div>
+							</details>
 								<ul class="actions">
 									<li><a href="https://github.com/EzequielFriasGomez/E-Commerce-Supply-Chain-Logistics-Bottleneck-Analysis" class="button small" target="_blank">View Repository on GitHub</a></li>
 								</ul>
@@ -163,6 +221,18 @@
 								<a href="images/fulls/Graf_Expansion.gif" class="image fit thumb"><img src="images/fulls/Graf_Expansion.gif" alt="Corporate expansion analysis dashboard" /></a>
 								<h3>Corporate Expansion Analysis</h3>
 								<p>Dashboard featuring profit margins and earnings by city to evaluate expansion opportunities.</p>
+								<details style="margin-top: 15px; cursor: pointer;">
+								<summary>
+									Read Executive Summary
+								</summary>
+								<div class="resumen-content">
+									<p><strong>The Problem:</strong> Despite boasting a high gross revenue ($2.30 million), management lacked visibility into actual operational costs and net profitability margins by region and product category.</p>
+									<p><strong>The Diagnosis:</strong> Q4 drives massive volume through holiday discounts but severely damages the profit margin. Furthermore, the Furniture vertical suffocates the overall margin due to high logistics costs, contributing a mere 6.44% of total profit, whereas Technology and Office Supplies combined account for 93.56% of earnings.</p>
+									<p><strong>The Strategic Move:</strong> Halt generic branch openings in the South region until the commercial bottleneck is identified, and execute an immediate audit of the furniture supply chain. Capital should be reallocated to consolidate dominance pushing high-margin Tech and Office portfolios in major hubs.</p>
+									<br>
+									<a href="https://github.com/EzequielFriasGomez/Corporate-Expansion-Analysis" target="_blank">View technical report on GitHub &rarr;</a>
+								</div>
+							</details>
 								<ul class="actions">
 									<li><a href="https://github.com/EzequielFriasGomez/Corporate-Expansion-Analysis" class="button small" target="_blank">View Repository on GitHub</a></li>
 								</ul>
@@ -171,6 +241,18 @@
 								<a href="images/fulls/Graf_Sim_Prods.jpg" class="image fit thumb"><img src="images/fulls/Graf_Sim_Prods.jpg" alt="Exploratory analysis of consumer behavior" /></a>
 								<h3>Exploratory Data Analysis (EDA) of Consumer Behavior</h3>
 								<p>Exploring purchasing patterns and customer behavior in e-commerce to uncover business opportunities.</p>
+								<details style="margin-top: 15px; cursor: pointer;">
+								<summary>
+									Read Executive Summary
+								</summary>
+								<div class="resumen-content">
+									<p><strong>The Problem:</strong> The company was spending its marketing budget blindly across all demographics and seasons. We needed to identify actual purchasing patterns to optimize ad spend and stop wasting resources.</p>
+									<p><strong>The Diagnosis:</strong> The 18-25 age bracket brings in nearly half the revenue of the 35-50 group, indicating that high-ticket electronics require disposable income. Additionally, Summer proved to be a dead zone ($2.46k) compared to the absolute revenue peak during Fall ($4.08k).</p>
+									<p><strong>The Strategic Move:</strong> Cut back ad spend targeting younger demographics and drastically reduce the marketing budget during the Summer. That budget must be aggressively reallocated to Fall campaigns aimed squarely at the 35-50 age group.</p>
+									<br>
+									<a href="https://github.com/EzequielFriasGomez/Ecommerce-Consumer-Behavior-EDA" target="_blank">View technical report on GitHub &rarr;</a>
+								</div>
+							</details>
 								<ul class="actions">
 									<li><a href="https://github.com/EzequielFriasGomez/Ecommerce-Consumer-Behavior-EDA" class="button small" target="_blank">View Repository on GitHub</a></li>
 								</ul>
